@@ -10,6 +10,7 @@ import UpdateProfile from "./pages/UpdateProfile";
 import NotFound from "./pages/NotFound";
 import PrivateRoute from "./components/PrivateRoute";
 import { form } from "framer-motion/client";
+import AllJobs from "./pages/AllJobs";
 
 export default function App() {
   return (

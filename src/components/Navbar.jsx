@@ -23,6 +23,7 @@ export default function Navbar() {
         <NavLink to="/" className="mx-2 text-[#064e3b] font-bold flex items-center gap-1"> <ImHome/> Home</NavLink>
         <NavLink to="/popular" className="mx-2 text-[#064e3b] font-bold flex items-center gap-1"> <TbChartBarPopular/> Popular Games</NavLink>
         <NavLink to="/myprofile" className="mx-2 text-[#064e3b] font-bold flex items-center gap-1"> <FaUser/> MyProfile</NavLink>
+        <NavLink to = "/all-jobs"  className="mx-2 text-[#064e3b] font-bold flex items-center gap-1">All Jobs</NavLink>
       </div>
       <div className="navbar-end">
         {user ? (
