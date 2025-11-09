@@ -1,11 +1,65 @@
+import { div } from 'framer-motion/client';
 import React from 'react'
+import { useLoaderData } from 'react-router'
 
 const JobDetails = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+    const data = useLoaderData()
+    const details = data.result;
+    console.log(details);
+    return (
+        <div key={details._id} className="card shadow-lg bg-white rounded-xl overflow-hidden w-[450px] my-20 mx-auto">
+            <div className="flex h-ful">
+                {/* Content Section - Full Width since no image */}
+                <div className="card-body w-full p-6 flex flex-col justify-between">
+                    {/* Job Title and Basic Info */}
+                    <div>
+                        <h3 className="card-title text-2xl font-bold text-gray-900 mb-2">
+                            {details.title}
+                        </h3>
+                        <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                            <span className="font-medium">Posted by: {details.postedBy}</span>
+                            <span className="bg-green-100 text-green-800 px-2 py-1 rounded">
+                                {details.category}
+                            </span>
+                        </div>
+                    </div>
+
+                    {/* Requirements - Show 5 items */}
+                    <div className="flex-grow">
+                        <h4 className="font-semibold text-gray-800 mb-3">Requirements:</h4>
+                        <ul className="list-disc list-inside space-y-2 text-gray-700">
+                            {details.requirements.slice(0, 5).map((requirement, index) => (
+                                <li key={index}>{requirement}</li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Additional Info */}
+                    <div className="mt-4 pt-4 border-t border-gray-200">
+                        <h4 className="font-semibold text-gray-800 mb-3">Job Details:</h4>
+                        <div className="grid grid-rows-1 gap-1 text-gray-700">
+                            <div className='flex gap-1'>
+                                <span className="font-medium">Job Type:</span>
+                                <p>{details.additionalInfo.jobType}</p>
+                            </div>
+                            <div className='flex gap-1'>
+                                <span className="font-medium">Location:</span>
+                                <p>{details.additionalInfo.location}</p>
+                            </div>
+                            <div className='flex gap-1'>
+                                <span className="font-medium">Salary:</span>
+                                <p>{details.additionalInfo.salaryRange}</p>
+                            </div>
+                            <div className='flex gap-1'>
+                                <span className="font-medium">Benefits:</span>
+                                <p>{details.additionalInfo.benefits.slice(0, 2).join(', ')}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
 }
 
 export default JobDetails

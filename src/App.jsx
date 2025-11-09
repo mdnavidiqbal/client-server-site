@@ -11,6 +11,7 @@ import NotFound from "./pages/NotFound";
 import PrivateRoute from "./components/PrivateRoute";
 import { form } from "framer-motion/client";
 import AllJobs from "./pages/AllJobs";
+import JobDetails from "./pages/JobDetails";
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="register" element={<Register />} />
         <Route path="game/:id" element={<PrivateRoute><GameDetails /></PrivateRoute>} />
         <Route path="my-profile" element={<PrivateRoute><MyProfile /></PrivateRoute>} />
+        <Route path="jobdetails/:id" element={<PrivateRoute><JobDetails/></PrivateRoute>}/>
         <Route path="update-profile" element={<PrivateRoute><UpdateProfile /></PrivateRoute>} />
         <Route path="*" element={<NotFound />} />
       </Route>

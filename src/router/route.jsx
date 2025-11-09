@@ -12,6 +12,8 @@ import GameDetails from "../pages/GameDetails";
 import Popular from "../pages/Popular";
 import UpdateProfile from "../pages/UpdateProfile";
 import AllJobs from "../pages/AllJobs";
+import JobDetails from "../pages/JobDetails";
+import PrivateRoute from "../components/PrivateRoute";
 
 
 export const router = createBrowserRouter([
@@ -57,6 +59,11 @@ export const router = createBrowserRouter([
         path:'/all-jobs',
         element: <AllJobs/>,
         loader:()=> fetch('http://localhost:3000/all-jobs')
+      },
+      {
+        path:'/jobdetails/:id',
+        element:<PrivateRoute><JobDetails/></PrivateRoute>,
+        loader : ({params})=> fetch(`http://localhost:3000/all-jobs/${params.id}`)
       }
     ]
   },
