@@ -11,6 +11,7 @@ import NotFound from "../pages/NotFound";
 import GameDetails from "../pages/GameDetails";
 import Popular from "../pages/Popular";
 import UpdateProfile from "../pages/UpdateProfile";
+import AllJobs from "../pages/AllJobs";
 
 
 export const router = createBrowserRouter([
@@ -53,7 +54,9 @@ export const router = createBrowserRouter([
         element: <UpdateProfile></UpdateProfile>
       },
       {
-        path:'/'
+        path:'/all-jobs',
+        element: <AllJobs/>,
+        loader:()=> fetch('http://localhost:3000/all-jobs')
       }
     ]
   },

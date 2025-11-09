@@ -1,14 +1,12 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router";
+import { Link, useLoaderData } from "react-router";
+import JobsCard from "../components/JobsCard";
 // import axios from "../api/axiosInstance";
 
 export default function AllJobs() {
-  const [jobs, setJobs] = useState([]);
-  const [sort, setSort] = useState("");
-
-  useEffect(() => {
-    axios.get(`/jobs?sort=${sort}`).then((res) => setJobs(res.data));
-  }, [sort]);
+    const data = useLoaderData();
+    console.log(data);
+  
 
   return (
     <div className="p-4">
@@ -27,24 +25,13 @@ export default function AllJobs() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {jobs.map((job) => (
-          <div key={job._id} className="border p-4 rounded shadow">
-            <h3 className="font-bold text-lg">{job.title}</h3>
-            <p>{job.category}</p>
-            <p className="text-sm text-gray-500">Deadline: {job.deadline}</p>
-            <p>
-              ${job.minimumPrice} - ${job.maximumPrice}
-            </p>
-            <Link
-              to={`/job/${job._id}`}
-              className="inline-block mt-2 bg-blue-500 text-white px-3 py-1 rounded"
-            >
-              View Details
-            </Link>
-          </div>
-        ))}
+        {
+            data.map(job => <JobsCard key={job._id} job={job} />)
+        }
+        
       </div>
     </div>
   );
 }
+
 
