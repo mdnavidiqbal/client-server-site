@@ -8,13 +8,13 @@ import MyProfile from "../pages/MyProfile";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import NotFound from "../pages/NotFound";
-import GameDetails from "../pages/GameDetails";
 import Popular from "../pages/Popular";
 import UpdateProfile from "../pages/UpdateProfile";
 import AllJobs from "../pages/AllJobs";
 import JobDetails from "../pages/JobDetails";
 import PrivateRoute from "../components/PrivateRoute";
 import AcceptedTask from "../pages/AcceptedTask";
+// import GameDetails from "../pages/GameDetails";
 
 
 export const router = createBrowserRouter([
@@ -25,7 +25,8 @@ export const router = createBrowserRouter([
       {
         path: "/",
         index: true,
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: ()=> fetch('http://localhost:3000/all-jobs')
       },
       {
         path: "/login",
@@ -43,15 +44,11 @@ export const router = createBrowserRouter([
         path: "/myprofile",
         element: <MyProfile></MyProfile>
       },
-      {
-        path: "/gamedetails/:id",
-        element: <GameDetails></GameDetails>
+      // {
+      //   path: "/gamedetails/:id",
+      //   element:<GameDetails></GameDetails>
 
-      },
-      {
-        path: "/popular",
-        element: <Popular></Popular>
-      },
+      // },
       {
         path: "/updateprofile",
         element: <UpdateProfile></UpdateProfile>
@@ -69,6 +66,7 @@ export const router = createBrowserRouter([
       {
         path:'/acceptedtask',
         element:<PrivateRoute><AcceptedTask/></PrivateRoute>,
+        loader: () => fetch('http://localhost:3000/accepted')
       }
     ]
   },
