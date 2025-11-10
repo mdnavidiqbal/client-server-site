@@ -5,6 +5,7 @@ import { TbChartBarPopular } from "react-icons/tb";
 import { FaUser } from "react-icons/fa";
 import { ImHome } from "react-icons/im";
 import logo from '../assets/logo.png'
+import { title } from "framer-motion/client";
 export default function Navbar() {
   const { user, logout } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -24,6 +25,7 @@ export default function Navbar() {
         <NavLink to="/popular" className="mx-2 text-[#064e3b] font-bold flex items-center gap-1"> <TbChartBarPopular/> Popular Games</NavLink>
         <NavLink to="/myprofile" className="mx-2 text-[#064e3b] font-bold flex items-center gap-1"> <FaUser/> MyProfile</NavLink>
         <NavLink to = "/all-jobs"  className="mx-2 text-[#064e3b] font-bold flex items-center gap-1">All Jobs</NavLink>
+        <NavLink to="/acceptedtask" className="mx-2 text-[#064e3b] font-bold flex items-center gap-1">Accepted Task</NavLink>
       </div>
       <div className="navbar-end">
         {user ? (
@@ -35,6 +37,7 @@ export default function Navbar() {
                 className="w-10 h-10 rounded-full border-2 border-primary hover:scale-105 transition-all duration-200"
               />
             </Link>
+
 
             <button onClick={handleLogout} className="btn btn-sm btn-outline bg-[#064e3b] text-white">
               Logout
