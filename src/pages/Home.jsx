@@ -160,23 +160,23 @@ export default function Home() {
   };
 
   return (
-    <div className="mx-auto w-full overflow-x-hidden">
+    <div className="mx-auto w-full overflow-x-hidden ">
       {/* 🌄 Banner */}
       <Banner />
 
       {/* 🏠 Intro Section */}
-      <section className="mb-8 w-11/12 mx-auto text-center">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold pt-6 text-gray-800">
+      <section className="mb-8 w-11/12 mx-auto text-center ">
+        <h1 className="text-4xl sm:text-3xl md:text-4xl font-bold pt-6 text-black">
           Welcome To The World Of Your Destination
         </h1>
-        <p className="text-sm sm:text-base text-gray-600 mt-2">
+        <p className="text-sm sm:text-base  text-black mt-2">
           Discover Your Journey With Us And Explore Bright Opportunities
         </p>
       </section>
 
       {/* 💼 Popular Jobs Section */}
       <section className="py-8 relative w-11/12 mx-auto">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-6 text-gray-900 text-center md:text-left">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-6 text-black text-center md:text-left">
           Popular Jobs
         </h2>
 

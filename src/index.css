@@ -8,6 +8,26 @@
 
 }
 
+
+/* 🌗 global light/dark theme background/text colors */
+:root {
+  color-scheme: light dark;
+}
+
+html {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+html:not(.dark) {
+  background-color: white;
+  color: rgb(17, 24, 39); /* text-gray-900 */
+}
+
+html.dark {
+  background-color: rgb(17, 24, 39); /* gray-900 */
+  color: rgb(243, 244, 246); /* gray-100 */
+}
+
 *{
       font-family: "Roboto", sans-serif;
 
