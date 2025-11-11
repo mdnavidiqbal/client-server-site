@@ -147,7 +147,7 @@ import Card from "../components/Card";
 
 export default function Home() {
   const data = useLoaderData();
-  const showJobs = data.slice(0, 10);
+  const showJobs = data.slice(0, 6);
 
   const scrollLeft = () => {
     const container = document.querySelector(".scroll-container");
@@ -175,7 +175,7 @@ export default function Home() {
       </section>
 
       {/* 💼 Popular Jobs Section */}
-      <section className="py-8 relative w-11/12 mx-auto">
+      {/* <section className="py-8 relative w-11/12 mx-auto">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-6 text-black text-center md:text-left">
           Popular Jobs
         </h2>
@@ -184,7 +184,7 @@ export default function Home() {
           <p className="text-gray-500 text-center py-8">No jobs available</p>
         ) : (
           <div className="relative">
-            {/* Cards Container (Scrollbar Hidden via inline CSS) */}
+           
             <div
               className="scroll-container flex gap-1 overflow-x-scroll snap-x snap-mandatory pb-4 px-1 sm:px-2"
               style={{
@@ -210,8 +210,6 @@ export default function Home() {
                 </div>
               ))}
             </div>
-
-            {/* ⬅ Left Arrow */}
             <button
               onClick={scrollLeft}
               className="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 bg-white border border-gray-300 rounded-full shadow-md items-center justify-center hover:bg-gray-100 transition-all duration-200"
@@ -230,8 +228,6 @@ export default function Home() {
                 />
               </svg>
             </button>
-
-            {/* ➡ Right Arrow */}
             <button
               onClick={scrollRight}
               className="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 bg-white border border-gray-300 rounded-full shadow-md items-center justify-center hover:bg-gray-100 transition-all duration-200"
@@ -252,22 +248,26 @@ export default function Home() {
             </button>
           </div>
         )}
-      </section>
-
-      {/* <section>
-        <div className="w-[1240px] h-[400px] flex justify-between rounded-lg mx-auto bg-gradient-to-r from-[#fbd3e9] to-[#bb377d]">
-          <div className="p-20">
-            <h1 className="font-bold text-4xl text-white">Need help with Vibe <br /> coding?</h1>
-            <p className="font-semibold text-white">Get matched with the right expert to keep building and <br /> marketing your project</p>
-            <button className="bg-white text-black p-3 rounded-lg my-4">Find An Expert </button>
-          </div>
-          <div>
-            <div className="p-10 mx-20 w-[400px] my-10 rounded-lg left-10 bg-gradient-to-r from-[#fbd3e9] to-[#bb377d]">
-              <img className="w-full rounded-lg" src={'https://i.ibb.co.com/jkXsmrdn/pexels-caio-56759.jpg'} alt="" />
-            </div>
-          </div>
-        </div>
       </section> */}
+      <section className="py-8 w-11/12 mx-auto">
+  <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-6 text-black text-center md:text-left">
+    Popular Jobs
+  </h2>
+
+  {showJobs.length === 0 ? (
+    <p className="text-gray-500 text-center py-8">No jobs available</p>
+  ) : (
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {showJobs.slice(0, 6).map((job) => (
+        <Card key={job._id} job={job} />
+      ))}
+    </div>
+  )}
+</section>
+
+
+      
+
       <section className="py-10 px-4">
         <div className="max-w-[1240px] mx-auto bg-gradient-to-r from-[#fbd3e9] to-[#bb377d] rounded-lg overflow-hidden flex flex-col-reverse md:flex-row items-center">
 

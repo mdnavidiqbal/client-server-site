@@ -8,7 +8,6 @@ const JobDetails = () => {
     const data = useLoaderData();
     const details = data.result;
     const [isAccepted, setIsAccepted] = useState(false); // ✅ track if job is accepted
-    const navigate = useNavigate();
     const handleAccept = async (e) => {
         e.preventDefault();
         const formatData = details;
@@ -28,14 +27,9 @@ const JobDetails = () => {
             if (data.success) {
                 toast.success(data.message || "Job accepted successfully!");
                 setIsAccepted(true); // ✅ disable button after success
-
-                //job successfully add houer porey amk navigate korey all-jobs e niye jbe
-                navigate('/all-jobs');
             } else {
                 toast.error(data.message || "This job is already accepted!");
 
-                // all ready job thklew amk all-jobs page e niye jbe
-                navigate('/all-jobs');
             }
         } catch (error) {
             console.log(error);
