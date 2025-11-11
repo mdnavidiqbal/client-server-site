@@ -91,7 +91,7 @@
 
 //       <section className="py-8 relative">
 //   <h2 className="text-6xl font-semibold mb-6 mx-10">Popular Jobs</h2>
-  
+
 //   {showJobs.length === 0 ? (
 //     <p className="text-gray-500 text-center py-8">No jobs available</p>
 //   ) : (
@@ -104,7 +104,7 @@
 //           </div>
 //         ))}
 //       </div>
-      
+
 //       {/* Left Arrow */}
 //       <button 
 //         onClick={() => {
@@ -117,7 +117,7 @@
 //           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
 //         </svg>
 //       </button>
-      
+
 //       {/* Right Arrow */}
 //       <button 
 //         onClick={() => {
@@ -147,7 +147,7 @@ import Card from "../components/Card";
 
 export default function Home() {
   const data = useLoaderData();
-  const showJobs = data.slice(0, 6);
+  const showJobs = data.slice(0, 10);
 
   const scrollLeft = () => {
     const container = document.querySelector(".scroll-container");
@@ -186,7 +186,7 @@ export default function Home() {
           <div className="relative">
             {/* Cards Container (Scrollbar Hidden via inline CSS) */}
             <div
-              className="scroll-container flex gap-4 overflow-x-scroll snap-x snap-mandatory pb-4 px-1 sm:px-2"
+              className="scroll-container flex gap-1 overflow-x-scroll snap-x snap-mandatory pb-4 px-1 sm:px-2"
               style={{
                 scrollbarWidth: "none", // Firefox
                 msOverflowStyle: "none", // IE and Edge
@@ -204,7 +204,7 @@ export default function Home() {
               {showJobs.map((job) => (
                 <div
                   key={job._id}
-                  className="min-w-[250px] sm:min-w-[300px] md:min-w-[350px] flex-shrink-0 snap-center"
+                  className="min-w-[250px] sm:min-w-[300px] md:min-w-[350px] shrink-0 snap-center"
                 >
                   <Card job={job} />
                 </div>
