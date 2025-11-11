@@ -18,7 +18,7 @@ export default function Navbar() {
   return (
     <div className="navbar bg-[#825901] shadow-lg">
       <div className="navbar-start">
-        <Link to="/" className="flex items-center gap-1.5 btn-ghost normal-case text-xl text-[#064e3b] font-bold"> <img className="w-10 h-10 rounded-3xl" src={logo} alt="" /> GameHub</Link>
+        <Link to="/" className="flex items-center gap-1.5 btn-ghost normal-case text-xl text-[#064e3b] font-bold"> <img className="w-10 h-10 rounded-3xl" src={"https://i.ibb.co.com/8g1DRGXJ/brand.png"} alt="" />NS TECH</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <NavLink to="/" className="mx-2 text-[#064e3b] font-bold flex items-center gap-1"> <ImHome/> Home</NavLink>

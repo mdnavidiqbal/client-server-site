@@ -76,10 +76,12 @@
 
 // Eita main
 import React from 'react';
+import { useNavigate } from 'react-router';
 import Swal from 'sweetalert2';
 
 const AcceptCard = ({ accept, acceptedList, setAcceptedList }) => {
     const { title, postedBy, requirements } = accept;
+    const navigate = useNavigate();
 
     const handleSucesfull = () => {
         alert("✅ Successfully Received Your Application");
@@ -106,6 +108,7 @@ const AcceptCard = ({ accept, acceptedList, setAcceptedList }) => {
                 .then(data => {
                     console.log(data);
                     // Remove from UI
+                    navigate('/all-jobs');
                     Swal.fire({
                         title: "Deleted!",
                         text: "Your task has been deleted.",

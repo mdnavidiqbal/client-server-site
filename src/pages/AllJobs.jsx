@@ -9,7 +9,7 @@ export default function AllJobs() {
   
 
   return (
-    <div className="p-4">
+    <div className="p-4 bg-gradient-to-r from-[#144357] to-[#f29492]">
       <h2 className="text-2xl font-bold mb-4">All Jobs</h2>
 
       <div className="mb-4">
