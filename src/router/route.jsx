@@ -27,7 +27,7 @@ export const router = createBrowserRouter([
         path: "/",
         index: true,
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:3000/all-jobs')
+        loader: () => fetch('https://freelance-market-place-iota.vercel.app/all-jobs')
       },
       {
         path: "/login",
@@ -44,7 +44,7 @@ export const router = createBrowserRouter([
       {
         path: "/myprofile",
         element: <MyProfile></MyProfile>
-      },                
+      },
       {
         path: "/updateprofile",
         element: <UpdateProfile></UpdateProfile>
@@ -52,17 +52,17 @@ export const router = createBrowserRouter([
       {
         path: '/all-jobs',
         element: <AllJobs />,
-        loader: () => fetch('http://localhost:3000/all-jobs')
+        loader: () => fetch('https://freelance-market-place-iota.vercel.app/all-jobs')
       },
       {
         path: '/jobdetails/:id',
         element: <PrivateRoute><JobDetails /></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:3000/all-jobs/${params.id}`)
+        loader: ({ params }) => fetch(`https://freelance-market-place-iota.vercel.app/all-jobs/${params.id}`)
       },
       {
         path: '/acceptedtask',
         element: <PrivateRoute><AcceptedTask /></PrivateRoute>,
-        loader: () => fetch('http://localhost:3000/accepted')
+        loader: () => fetch('https://freelance-market-place-iota.vercel.app/accepted')
       },
       {
         path: '/addjobs',
@@ -71,12 +71,12 @@ export const router = createBrowserRouter([
       {
         path: '/myaddedjob',
         element: <PrivateRoute><MyAddedJobs /></PrivateRoute>,
-        loader: () => fetch('http://localhost:3000/addjobs')
+        loader: () => fetch('https://freelance-market-place-iota.vercel.app/addjobs')
       },
       {
         path: '/updatejob/:id',
         element: <PrivateRoute><UpdateJob /></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:3000/addjobs/${params.id}`)
+        loader: ({ params }) => fetch(`https://freelance-market-place-iota.vercel.app/addjobs/${params.id}`)
       },
 
 

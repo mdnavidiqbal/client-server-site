@@ -9,7 +9,7 @@ export default function AllJobs() {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        let url = "http://localhost:3000/all-jobs";
+        let url = "https://freelance-market-place-iota.vercel.app/all-jobs";
         if (sort) url += `?sort=${sort}`; // append query param if sort is set
 
         const res = await fetch(url);

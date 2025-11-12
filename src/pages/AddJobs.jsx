@@ -37,7 +37,7 @@ export default function AddJobs() {
     };
 
     try {
-      const response = await fetch("http://localhost:3000/addjobs", {
+      const response = await fetch("https://freelance-market-place-iota.vercel.app/addjobs", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(jobData),
@@ -166,7 +166,7 @@ export default function AddJobs() {
           Post Job
         </button>
       </form>
-      <ToastContainer/>
+      <ToastContainer />
     </div>
   );
 }

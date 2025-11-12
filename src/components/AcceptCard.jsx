@@ -22,7 +22,7 @@ const AcceptCard = ({ accept, acceptedList, setAcceptedList }) => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:3000/accepted/${accept._id}`, {
+                fetch(`https://freelance-market-place-iota.vercel.app/accepted/${accept._id}`, {
                     method: "DELETE",
                     headers: {
                         "Content-Type": "application/json",
@@ -64,20 +64,20 @@ const AcceptCard = ({ accept, acceptedList, setAcceptedList }) => {
             </ul>
 
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                <button 
-                    onClick={handleSucesfull} 
+                <button
+                    onClick={handleSucesfull}
                     className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white py-2 px-4 sm:px-6 rounded-lg font-semibold text-sm sm:text-base transition-all duration-200 transform hover:scale-105 shadow-md hover:shadow-lg"
                 >
                     Done
                 </button>
-                <button 
-                    onClick={handleDeleted} 
+                <button
+                    onClick={handleDeleted}
                     className="bg-gradient-to-r from-[#e35d5b] to-[#e53935] hover:from-[#e15c5a] hover:to-[#e02e2d] text-white py-2 px-4 sm:px-6 rounded-lg font-semibold text-sm sm:text-base transition-all duration-200 transform hover:scale-105 shadow-md hover:shadow-lg"
                 >
                     Cancel
                 </button>
             </div>
-            <ToastContainer/>
+            <ToastContainer />
         </div>
     );
 };

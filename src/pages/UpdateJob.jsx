@@ -28,7 +28,7 @@ const UpdateJob = () => {
     // form submit handler
     const handleSubmit = async e => {
         e.preventDefault();
-        const res = await fetch(`http://localhost:3000/addjobs/${loadedJob._id}`, {
+        const res = await fetch(`https://freelance-market-place-iota.vercel.app/addjobs/${loadedJob._id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)
