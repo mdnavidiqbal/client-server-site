@@ -53,7 +53,7 @@ const AcceptCard = ({ accept, acceptedList, setAcceptedList }) => {
     return (
         <div className="w-11/12 max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl mx-auto my-6 bg-gradient-to-r from-[#8360c3] to-[#2ebf91] shadow-lg rounded-2xl p-5 sm:p-6 md:p-8 border border-gray-200 transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
             <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-gray-800 mb-2">{title}</h2>
-            <p className="text-xs sm:text-sm md:text-base text-gray-500 mb-3">
+            <p className="text-xs sm:text-sm md:text-base text-gray-800 mb-3">
                 Posted by: <span className="font-semibold text-gray-700">{postedBy}</span>
             </p>
 

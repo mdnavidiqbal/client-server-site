@@ -21,11 +21,8 @@ export default function Navbar() {
   ];
 
   useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+    if (darkMode) document.documentElement.classList.add("dark");
+    else document.documentElement.classList.remove("dark");
   }, [darkMode]);
 
   const handleLogout = async () => {
@@ -37,7 +34,7 @@ export default function Navbar() {
   return (
     <div className="relative z-50">
       {/* Navbar */}
-      <div className="bg-[#825901] shadow-lg transition-colors duration-300 flex justify-between items-center px-4 sm:px-6 lg:px-10 py-3">
+      <div className="bg-gradient-to-r from-[#302b63] to-[#24243e] shadow-lg transition-colors duration-300 flex justify-between items-center px-4 sm:px-6 lg:px-10 py-3">
         {/* Logo */}
         <Link
           to="/"
@@ -51,13 +48,13 @@ export default function Navbar() {
           NS TECH
         </Link>
 
-        {/* Desktop menu */}
+        {/* Desktop nav */}
         <div className="hidden lg:flex items-center gap-4">
           {navItems.map((item, idx) => (
             <NavLink
               key={idx}
               to={item.to}
-              className="flex items-center gap-1 font-bold text-[#064e3b] dark:text-gray-200"
+              className="flex items-center gap-1 font-bold text-[#064e3b] dark:text-gray-200 hover:text-white transition-colors duration-200"
             >
               {item.icon} {item.name}
             </NavLink>
@@ -66,16 +63,42 @@ export default function Navbar() {
 
         {/* Right section */}
         <div className="flex items-center gap-3">
-          {user && (
-            <img
-              src={user.photoURL || "https://i.ibb.co/3C5xJ7R/user.png"}
-              alt="profile"
-              className="w-10 h-10 rounded-full border-2 border-primary cursor-pointer hover:scale-105 transition-all duration-200"
-              onClick={() => setMenuOpen(!menuOpen)}
-            />
+          {user ? (
+            <>
+              {/* Profile pic (mobile click opens sidebar) */}
+              <img
+                src={user.photoURL || "https://i.ibb.co/3C5xJ7R/user.png"}
+                alt="profile"
+                className="w-10 h-10 rounded-full border-2 border-primary cursor-pointer hover:scale-105 transition-all duration-200"
+                onClick={() => setMenuOpen(!menuOpen)}
+              />
+
+              {/* Logout button */}
+              <button
+                onClick={handleLogout}
+                className="hidden sm:inline px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-lg font-semibold hover:bg-red-600 transition-all duration-200"
+              >
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <Link
+                to="/login"
+                className="px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-lg font-semibold hover:bg-[#055a4f] transition-all duration-200"
+              >
+                Login
+              </Link>
+              <Link
+                to="/register"
+                className="px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-lg font-semibold hover:bg-[#055a4f] transition-all duration-200"
+              >
+                Register
+              </Link>
+            </>
           )}
 
-          {/* Dark mode */}
+          {/* Dark/Light mode toggle */}
           <button
             onClick={() => setDarkMode(!darkMode)}
             className="w-10 h-10 rounded-full flex items-center justify-center bg-gray-200 dark:bg-gray-700 hover:scale-110 transition-transform duration-200"
@@ -91,11 +114,8 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Sidebar */}
-      {menuOpen && (
-        <div
-          className="fixed top-0 right-0 w-64 bg-gradient-to-b from-[#3b8d99] via-[#6b6b83] to-[#aa4b6b] shadow-lg z-50 p-6 flex flex-col gap-4 transition-transform duration-300"
-          style={{ height: "auto" }}
-        >
+      {menuOpen && user && (
+        <div className="fixed top-0 right-0 w-64 max-h-full overflow-auto bg-gradient-to-b from-[#3b8d99] via-[#6b6b83] to-[#aa4b6b] shadow-lg z-50 p-6 flex flex-col gap-4 transition-transform duration-300">
           {/* Close button */}
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-xl font-bold text-white">Menu</h2>
@@ -118,14 +138,12 @@ export default function Navbar() {
           ))}
 
           {/* Logout */}
-          {user && (
-            <button
-              onClick={handleLogout}
-              className="mt-4 w-full py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg font-semibold transition-all duration-200"
-            >
-              Logout
-            </button>
-          )}
+          <button
+            onClick={handleLogout}
+            className="mt-4 w-full py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg font-semibold transition-all duration-200"
+          >
+            Logout
+          </button>
         </div>
       )}
     </div>

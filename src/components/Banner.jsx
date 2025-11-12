@@ -32,7 +32,6 @@ const Banner = () => {
         backgroundAttachment: "fixed",
       }}
     >
-      {/* Background Overlay with responsive opacity */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80 md:from-black/70 md:via-black/50 md:to-black/70"></div>
 
       <div className="relative z-10 min-h-screen flex items-center justify-center px-4 py-8 md:py-16">
@@ -51,14 +50,12 @@ const Banner = () => {
               <Link to="/addjobs" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg w-full sm:w-auto">
                 Post a Job --
               </Link>
-              {/* <button className="bg-white/20 hover:bg-white/30 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 border border-white/30 w-full sm:w-auto">
-                Browse Jobs
-              </button> */}
+              
               <Link to="/all-jobs" className="bg-white/20 hover:bg-white/30 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 border border-white/30 w-full sm:w-auto">Browse Jobs</Link>
             </div>
           </div>
 
-          {/* Background Image Indicators - Responsive size */}
+          
           <div className="flex justify-center mt-12 md:mt-16 space-x-2 md:space-x-3">
             {backgroundImages.map((_, index) => (
               <button

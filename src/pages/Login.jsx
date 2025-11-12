@@ -86,7 +86,7 @@ export default function Login() {
                 className="input input-bordered w-full bg-white/20 placeholder-gray-200 text-white"
               />
 
-              <button className="btn btn-primary w-full text-white">
+              <button className="btn btn-primary w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white">
                 Login
               </button>
 

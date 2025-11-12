@@ -21,10 +21,7 @@ export default function Home() {
 
   return (
     <div className="mx-auto w-full overflow-x-hidden ">
-      {/* 🌄 Banner */}
       <Banner />
-
-      {/* 🏠 Intro Section */}
       <section className="mb-8 w-11/12 mx-auto text-center ">
         <h1 className="text-4xl sm:text-3xl md:text-4xl font-bold pt-6 text-black">
           Welcome To The World Of Your Destination
@@ -48,9 +45,12 @@ export default function Home() {
       ))}
     </div>
   )}
-</section>  
+</section>
 
-     <section className="py-10 px-4">
+
+      
+
+      <section className="py-10 px-4">
         <div className="max-w-[1240px] mx-auto bg-gradient-to-r from-[#fbd3e9] to-[#bb377d] rounded-lg overflow-hidden flex flex-col-reverse md:flex-row items-center">
 
           {/* Text Section */}
