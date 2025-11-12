@@ -127,7 +127,6 @@ export default function Navbar() {
           Accepted Task
         </NavLink>
       </div>
-
       <div className="navbar-end flex items-center gap-3">
         {user ? (
           <div className="flex items-center gap-3">

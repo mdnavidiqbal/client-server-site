@@ -14,6 +14,7 @@ import AllJobs from "../pages/AllJobs";
 import JobDetails from "../pages/JobDetails";
 import PrivateRoute from "../components/PrivateRoute";
 import AcceptedTask from "../pages/AcceptedTask";
+import AddJobs from "../pages/AddJobs";
 // import GameDetails from "../pages/GameDetails";
 
 
@@ -67,6 +68,10 @@ export const router = createBrowserRouter([
         path:'/acceptedtask',
         element:<PrivateRoute><AcceptedTask/></PrivateRoute>,
         loader: () => fetch('http://localhost:3000/accepted')
+      },
+      {
+        path:'/addjobs',
+        element:<AddJobs/>
       }
     ]
   },

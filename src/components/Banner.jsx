@@ -145,7 +145,7 @@
 //               world. Enjoy sliding through your favorite titles!
 //             </p>
 //           </div>
-          
+
 //           {/* Game Cards Slider - Responsive container */}
 //           <div className="relative overflow-hidden w-full mt-4 md:mt-8">
 //             <div ref={sliderRef} className="flex w-max gap-3 md:gap-4 lg:gap-6">
@@ -252,12 +252,12 @@ const Banner = () => {
             <p className="text-base md:text-xl lg:text-2xl font-semibold text-gray-300 max-w-3xl mx-auto px-4 mb-8">
               Find the perfect talent for your projects. Browse through thousands of job listings and connect with top freelancers worldwide.
             </p>
-            
+
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
-              <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg w-full sm:w-auto">
+              <Link to="/addjobs" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg w-full sm:w-auto">
                 Post a Job --
-              </button>
+              </Link>
               {/* <button className="bg-white/20 hover:bg-white/30 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 border border-white/30 w-full sm:w-auto">
                 Browse Jobs
               </button> */}
@@ -270,13 +270,11 @@ const Banner = () => {
             {backgroundImages.map((_, index) => (
               <button
                 key={index}
-                className={`transition-all duration-300 ${
-                  index === currentBg 
-                    ? 'bg-white scale-110 md:scale-125' 
+                className={`transition-all duration-300 ${index === currentBg
+                    ? 'bg-white scale-110 md:scale-125'
                     : 'bg-white/50 hover:bg-white/70'
-                } ${
-                  window.innerWidth < 640 ? 'w-2 h-2' : 'w-3 h-3'
-                } rounded-full`}
+                  } ${window.innerWidth < 640 ? 'w-2 h-2' : 'w-3 h-3'
+                  } rounded-full`}
                 onClick={() => setCurrentBg(index)}
                 aria-label={`Change background to image ${index + 1}`}
               />
@@ -285,7 +283,7 @@ const Banner = () => {
 
           {/* Optional: Manual navigation arrows for mobile */}
           <div className="flex justify-center mt-6 md:hidden">
-            <button 
+            <button
               onClick={() => setCurrentBg((prev) => (prev - 1 + backgroundImages.length) % backgroundImages.length)}
               className="p-3 mx-2 bg-white/20 rounded-full hover:bg-white/30 transition-colors"
             >
@@ -293,7 +291,7 @@ const Banner = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
-            <button 
+            <button
               onClick={() => setCurrentBg((prev) => (prev + 1) % backgroundImages.length)}
               className="p-3 mx-2 bg-white/20 rounded-full hover:bg-white/30 transition-colors"
             >
