@@ -15,6 +15,8 @@ import JobDetails from "../pages/JobDetails";
 import PrivateRoute from "../components/PrivateRoute";
 import AcceptedTask from "../pages/AcceptedTask";
 import AddJobs from "../pages/AddJobs";
+import MyAddedJobs from "../pages/MyAddedJobs";
+import UpdateJob from "../pages/UpdateJob";
 // import GameDetails from "../pages/GameDetails";
 
 
@@ -27,7 +29,7 @@ export const router = createBrowserRouter([
         path: "/",
         index: true,
         element: <Home></Home>,
-        loader: ()=> fetch('http://localhost:3000/all-jobs')
+        loader: () => fetch('http://localhost:3000/all-jobs')
       },
       {
         path: "/login",
@@ -65,14 +67,26 @@ export const router = createBrowserRouter([
         loader: ({ params }) => fetch(`http://localhost:3000/all-jobs/${params.id}`)
       },
       {
-        path:'/acceptedtask',
-        element:<PrivateRoute><AcceptedTask/></PrivateRoute>,
+        path: '/acceptedtask',
+        element: <PrivateRoute><AcceptedTask /></PrivateRoute>,
         loader: () => fetch('http://localhost:3000/accepted')
       },
       {
-        path:'/addjobs',
-        element:<AddJobs/>
-      }
+        path: '/addjobs',
+        element: <PrivateRoute><AddJobs /></PrivateRoute>
+      },
+      {
+        path: '/myaddedjob',
+        element: <PrivateRoute><MyAddedJobs /></PrivateRoute>,
+        loader: () => fetch('http://localhost:3000/addjobs')
+      },
+      {
+        path: '/updatejob/:id',
+        element: <UpdateJob />,
+        loader: ({ params }) => fetch(`http://localhost:3000/addjobs/${params.id}`)
+      },
+
+
     ]
   },
 ]);

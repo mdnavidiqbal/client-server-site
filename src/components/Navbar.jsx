@@ -126,6 +126,7 @@ export default function Navbar() {
         >
           Accepted Task
         </NavLink>
+        <NavLink to="/myaddedjob" className="mx-2 text-[#064e3b] font-bold flex items-center gap-1 dark:text-gray-200">My Added Job</NavLink>
       </div>
       <div className="navbar-end flex items-center gap-3">
         {user ? (

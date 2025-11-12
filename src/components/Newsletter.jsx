@@ -32,7 +32,7 @@ export default function Newsletter() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <button className="btn btn-primary" type="submit">Subscribe</button>
+        <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 text-white font-bold btn" type="submit">Subscribe</button>
       </form>
     </section>
   );
