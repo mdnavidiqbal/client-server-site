@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const JobDetails = () => {
     const data = useLoaderData();
     const details = data.result;
-    const [isAccepted, setIsAccepted] = useState(false); // ✅ track if job is accepted
+    const [isAccepted, setIsAccepted] = useState(false); 
     const handleAccept = async (e) => {
         e.preventDefault();
         const formatData = details;
@@ -26,7 +26,7 @@ const JobDetails = () => {
 
             if (data.success) {
                 toast.success(data.message || "Job accepted successfully!");
-                setIsAccepted(true); // ✅ disable button after success
+                setIsAccepted(true); 
             } else {
                 toast.error(data.message || "This job is already accepted!");
 
@@ -82,12 +82,14 @@ const JobDetails = () => {
                                 <p>{details.additionalInfo.benefits.slice(0, 2).join(', ')}</p>
                             </div>
                         </div>
+
+                            <h4 className='my-1'>Posted At :-{details.postedAt}</h4>
                     </div>
 
                     <div className="mt-6">
                         <button
                             onClick={handleAccept}
-                            disabled={isAccepted} // ✅ disable button if already accepted
+                            disabled={isAccepted} // disable button if already accepted
                             className={`flex-1 bg-gradient-to-r from-purple-500 to-pink-500 
                                 hover:from-purple-600 hover:to-pink-600 text-white py-2 px-4 
                                 rounded-lg font-semibold text-sm transition-all duration-200 transform 

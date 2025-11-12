@@ -1,30 +1,3 @@
-// import React from 'react'
-// import { useLoaderData } from 'react-router'
-// import AcceptCard from '../components/AcceptCard';
-
-// const AcceptedTask = () => {
-//     const data = useLoaderData();
-//     console.log(data)
-
-//     return (
-
-//         <div className='p-1 w-full'>
-//             <div className='w-full'>
-//                 {
-//                     data.map(accept => <AcceptCard key={accept._id} accept={accept} />)
-//                 }
-
-//             </div>
-
-//         </div>
-
-//     )
-// }
-
-// export default AcceptedTask
-
-// Eita Main
-
 import React, { useState, useEffect } from 'react';
 import { useLoaderData } from 'react-router';
 import AcceptCard from '../components/AcceptCard';

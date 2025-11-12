@@ -6,58 +6,6 @@ const JobsCard = ({ job }) => {
     coverImage, userEmai, _id } = job
 
   return (
-    // <div class="max-w-xs h-[400px] mx-auto bg-gradient-to-r from-[#c04848] to-[#480048] rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-    //   {/* Image Section  */}
-    //   <div class="overflow-hidden">
-    //     <img className='w-[150px] my-5 mx-auto h-[100px]' src={coverImage} alt="" />
-    //   </div>
-    //   {/* Content Section  */}
-    //   <div class="p-3">
-    //     {/* Title  */}
-    //     <h3 class="text-xl font-bold text-black mb-2 line-clamp-2 hover:text-purple-600 transition-colors duration-200">
-    //       {
-    //         title
-    //       }
-    //     </h3>
-
-    //     {/* Summary  */}
-    //     <div>
-    //       <p class="text-white text-sm mb-4 line-clamp-3 leading-relaxed">
-    //         {
-    //           job.summary
-    //         }
-    //       </p>
-    //       <p className='pb-7'>
-    //         {
-    //           category
-    //         }
-    //       </p>
-    //     </div>
-
-    //     {/* Posted By  */}
-    //     <div class="flex items-center justify-between mb-2">
-    //       <div class="flex gap-10 items-center space-x-2">
-    //         <div className='flex gap-3'>
-    //           <div class="w-8 h-8 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full flex items-center justify-center">
-    //             <span class="text-white text-xs font-bold"></span>
-    //           </div>
-    //           <div>
-    //             <p class="text-sm font-medium text-black">{job.postedBy}</p>
-    //             <p class="text-xs text-gray-900">Startup.com</p>
-    //           </div>
-    //         </div>
-    //         <div class="w-[45px]">
-    //           <Link to={`/jobdetails/${_id}`} className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white py-2 px-4 rounded-lg font-semibold text-sm transition-all duration-200 transform hover:scale-105 shadow-md hover:shadow-lg btn btn-primary">Details</Link>
-    //         </div>
-    //       </div>
-    //     </div>
-
-    //     {/* Action Buttons  */}
-    //     {/* <div class="w-[45px]">
-    //       <Link to={`/jobdetails/${_id}`} className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white py-2 px-4 rounded-lg font-semibold text-sm transition-all duration-200 transform hover:scale-105 shadow-md hover:shadow-lg btn btn-primary">Details</Link>
-    //     </div> */}
-    //   </div>
-    // </div>
 
     <div className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xs mx-auto bg-gradient-to-r from-[#c04848] to-[#480048] rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 p-3 sm:p-4 md:p-5">
 

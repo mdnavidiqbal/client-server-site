@@ -1,108 +1,3 @@
-// import React from 'react'
-
-// const UpdateJob = () => {
-//     return (
-//         <div className="max-w-3xl mx-auto mt-10 p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
-//             <h2 className="text-2xl font-bold mb-6 text-gray-800 dark:text-gray-100">
-//                 Update Job
-//             </h2>
-
-//             <form  className="space-y-4">
-//                 {/* Title */}
-//                 <div>
-//                     <label className="block mb-1 font-semibold text-gray-700 dark:text-gray-200">
-//                         Title
-//                     </label>
-//                     <input
-//                         type="text"
-//                         name="title"
-//                         required
-//                         className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 dark:bg-gray-700 dark:text-white"
-//                     />
-//                 </div>
-
-//                 {/* Posted By (auto) */}
-//                 <div>
-//                     <label className="block mb-1 font-semibold text-gray-700 dark:text-gray-200">
-//                         Posted By
-//                     </label>
-//                     <input
-//                         type="text"
-//                         readOnly
-//                         className="w-full px-4 py-2 border rounded-lg bg-gray-100 dark:bg-gray-700 dark:text-white"
-//                     />
-//                 </div>
-
-//                 {/* Category */}
-//                 <div>
-//                     <label className="block mb-1 font-semibold text-gray-700 dark:text-gray-200">
-//                         Category
-//                     </label>
-//                     <select
-//                         name="category"
-//                         className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 dark:bg-gray-700 dark:text-white"
-//                     >
-//                         <option value="">Select Category</option>
-//                         <option>Web Development</option>
-//                         <option>Mobile Development</option>
-//                         <option>Data Science</option>
-//                         <option>Digital Marketing</option>
-//                         <option>Graphic Design</option>
-//                         <option>Content Writing</option>
-//                     </select>
-//                 </div>
-
-//                 {/* Summary */}
-//                 <div>
-//                     <label className="block mb-1 font-semibold text-gray-700 dark:text-gray-200">
-//                         Summary
-//                     </label>
-//                     <textarea
-//                         name="summary"
-//                         rows={5}
-//                         required
-//                         className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 dark:bg-gray-700 dark:text-white"
-//                     ></textarea>
-//                 </div>
-
-//                 {/* Cover Image */}
-//                 <div>
-//                     <label className="block mb-1 font-semibold text-gray-700 dark:text-gray-200">
-//                         Cover Image URL
-//                     </label>
-//                     <input
-//                         type="text"
-//                         name="coverImage"
-//                         className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 dark:bg-gray-700 dark:text-white"
-//                     />
-//                 </div>
-
-//                 {/* User Email (auto) */}
-//                 <div>
-//                     <label className="block mb-1 font-semibold text-gray-700 dark:text-gray-200">
-//                         User Email
-//                     </label>
-//                     <input
-//                         type="email"
-//                         readOnly
-//                         className="w-full px-4 py-2 border rounded-lg bg-gray-100 dark:bg-gray-700 dark:text-white"
-//                     />
-//                 </div>
-
-//                 <button
-//                     type="submit"
-//                     className="w-full bg-purple-500 hover:bg-purple-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
-//                 >
-//                     Update Now
-//                 </button>
-//             </form>
-//         </div>
-//     )
-// }
-
-// export default UpdateJob
-
-
 import React, { useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthProvider';
 import { toast, ToastContainer } from 'react-toastify';
@@ -151,7 +46,7 @@ const UpdateJob = () => {
     };
 
     return (
-        <div className="max-w-3xl mx-auto mt-10 p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
+        <div className="max-w-lg my-5 mx-auto mt-10 p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
             <h2 className="text-2xl font-bold mb-6 text-gray-800 dark:text-gray-100">
                 Update Job
             </h2>

@@ -4,7 +4,6 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-// import GameDetails from "./pages/GameDetails";
 import MyProfile from "./pages/MyProfile";
 import UpdateProfile from "./pages/UpdateProfile";
 import NotFound from "./pages/NotFound";
@@ -21,7 +20,6 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
-        {/* <Route path="game/:id" element={<PrivateRoute><GameDetails /></PrivateRoute>} /> */}
         <Route path="my-profile" element={<PrivateRoute><MyProfile /></PrivateRoute>} />
         <Route path="jobdetails/:id" element={<PrivateRoute><JobDetails/></PrivateRoute>}/>
         <Route path="acceptedtask" element={<PrivateRoute><AcceptedTask/></PrivateRoute>} />

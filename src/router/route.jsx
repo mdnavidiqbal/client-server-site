@@ -8,8 +8,6 @@ import MyProfile from "../pages/MyProfile";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import NotFound from "../pages/NotFound";
-import Popular from "../pages/Popular";
-import UpdateProfile from "../pages/UpdateProfile";
 import AllJobs from "../pages/AllJobs";
 import JobDetails from "../pages/JobDetails";
 import PrivateRoute from "../components/PrivateRoute";
@@ -17,7 +15,7 @@ import AcceptedTask from "../pages/AcceptedTask";
 import AddJobs from "../pages/AddJobs";
 import MyAddedJobs from "../pages/MyAddedJobs";
 import UpdateJob from "../pages/UpdateJob";
-// import GameDetails from "../pages/GameDetails";
+import UpdateProfile from "../pages/UpdateProfile";
 
 
 export const router = createBrowserRouter([
@@ -46,12 +44,7 @@ export const router = createBrowserRouter([
       {
         path: "/myprofile",
         element: <MyProfile></MyProfile>
-      },
-      // {
-      //   path: "/gamedetails/:id",
-      //   element:<GameDetails></GameDetails>
-
-      // },
+      },                
       {
         path: "/updateprofile",
         element: <UpdateProfile></UpdateProfile>

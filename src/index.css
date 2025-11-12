@@ -8,8 +8,6 @@
 
 }
 
-
-/* 🌗 global light/dark theme background/text colors */
 :root {
   color-scheme: light dark;
 }
@@ -20,12 +18,12 @@ html {
 
 html:not(.dark) {
   background-color: white;
-  color: rgb(17, 24, 39); /* text-gray-900 */
+  color: rgb(17, 24, 39);
 }
 
 html.dark {
-  background-color: rgb(17, 24, 39); /* gray-900 */
-  color: rgb(243, 244, 246); /* gray-100 */
+  background-color: rgb(17, 24, 39);
+  color: rgb(243, 244, 246); 
 }
 
 *{
