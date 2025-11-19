@@ -4,7 +4,7 @@ A full-stack web application where users can explore, add, update, and delete jo
 
 ## 🚀 Live Demo
 
-- **Live Site:** [https://your-freelance-marketplace.netlify.app](https://your-freelance-marketplace.netlify.app)
+- **Live Site:** https://chipper-squirrel-d93695.netlify.app/
 - **Client Repo:** [https://github.com/your-username/freelance-marketplace-client](https://github.com/your-username/freelance-marketplace-client)
 - **Server Repo:** [https://github.com/your-username/freelance-marketplace-server](https://github.com/your-username/freelance-marketplace-server)
 
